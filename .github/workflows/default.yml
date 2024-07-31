@@ -1,10 +1,12 @@
 on: push
 
 jobs:
-  run:
+  BuildAndTest:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
+      - name: Debug
+        run: gcc --version
       - name: Build
         run: gcc hello.c -o hello
       - name: Test
