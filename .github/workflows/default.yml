@@ -2,7 +2,7 @@ on: push
 
 jobs:
   run:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
     steps:
-      - name: Run the thingy
-        run: ./test.sh
+      - uses: actions/checkout@v4
+      - run: ./test.sh
